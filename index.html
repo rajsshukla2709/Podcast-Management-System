@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Podcast Production Management System</title>
+        <link rel="stylesheet"
+        href="style.css">
+    </head>
+    <body>
+        <h1>Podcast Production Management System</h1>
+        <p>Manage your podcast episodes easily.</p>
+
+        <hr>
+
+        <h2>Dashboard</h2>
+        <p>Total Episodes: <span id="totalEpisodes">0</span></p>
+        <p>Episodes In Progress: <span id="inProgressEpisodes">0</span></p>
+        <p>Published Episodes: <span id="publishedEpisodes">0</span></p>
+
+        <hr>
+
+        <h2>Episode Planning</h2>
+
+        <input type="text" id="episode" placeholder="Episode Name">
+        <input type="text" id="guest" placeholder="Guest Name">
+        <button onclick="addEpisode()">Add Episode</button>
+    
+
+        <h3>Episode List</h3>
+        <div id="episodelist"></div>
+
+        <hr>
+
+        <h2>Guest Profiles</h2>
+        <input type="text" id="guestName" placeholder="Guest Name">
+        <input type="text" id="guestEmail" placeholder="Guest Email">
+        <button onclick="addGuest()">Add Guest</button>
+        <div id="guestList"></div>
+
+        <h2>Recording Status</h2>
+        <input type="text" id="recordingEpisode" placeholder="Episode Name">
+        <select id="recordingStatus"><option value="Not Started">Not Started</option>
+        <option value="Recording">Recording</option>
+    <option value="Completed">Completed</option></select>
+    <button onclick="addRecording()">Update Status</button>
+    <div id="recordingList"></div>
+
+        <h2>Script Management</h2>
+        
+        <input type="text" id="scriptEpisode" placeholder="Episode Name">
+
+        <br><br>
+
+        <textarea id="episodeScript" placeholder="Write your episode script"></textarea>
+
+        <br><br>
+
+        <button onclick="addScript()">Save Script</button>
+
+        <div id="scriptList"></div>
+
+        <h2>Editing Stages</h2>
+        <input type="text" id="editingEpisode" placeholder="Episode Name">
+
+        <select id="editingStatus">
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In progress</option>
+            <option value="Completed">Completed</option></select>
+
+            <button onclick="addEditing()">Update Editing</button>
+            <div id="editingList"></div>
+        
+
+        <h2>Publishing Status</h2>
+        <input type="text" id="publishEpisode" placeholder="Episode Name">
+        <select id="publishStatus">
+            <option value="Not Published">Not Published</option>
+            <option value="Scheduled">Scheduled</option>
+            <option value="Published">Published</option>
+        </select>
+        <button onclick="addPublishing()">Update Publishing</button>
+        <div id="publishingList"></div>
+
+
+<section>
+    <h2>Artwork Management</h2>
+
+    <input type="text" id="artworkEpisode"
+    placeholder="Episode Name">
+
+    <select id="artworkStatus">
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+    </select>
+
+    <button onclick="addArtwork()">Update Artwork</button>
+
+    <ul id="artworkList"></ul>
+</section>
+        <script src="script.js"></script>
+    </body>
+</html>
